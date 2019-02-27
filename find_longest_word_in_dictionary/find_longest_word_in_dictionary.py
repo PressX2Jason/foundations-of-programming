@@ -30,11 +30,9 @@ def find_longest_word_in_dictionary_that_subsequence_of_given_string(S, D):
             # if the current letter is found after the previous letter,
             # then we would require rearrangment for subsequence
             else:
-                print(word + ' is not a winner')
                 break
         else:
             # subsequence found
-            print('subsequence found', word, len(word), maxLen)
             if len(word) > maxLen:
                 result = word
                 maxLen = len(word)
