@@ -20,14 +20,14 @@ def find_longest_word_in_dictionary_that_subsequence_of_given_string(S, D):
     for word in D:
         prevB = -1
         for letter in word:
-            if letter in indexer:
-                for position in indexer[letter]:
-                    if position > prevB:
-                        prevB = position
-            # if the word in D has a letter that S doesn't have,
-            # it's impossible for it to be a subsequence
-            # if the current letter is found after the previous letter,
-            # then we would require rearrangment for subsequence
+            if letter not in indexer:
+                # if the word in D has a letter that S doesn't have,
+                # it's impossible for it to be a subsequence
+                break
+            for position in indexer[letter]:
+                if position > prevB:
+                    prevB = position
+                    break
             else:
                 break
         else:
