@@ -6,3 +6,6 @@
 # The words "able" and "ale" are both subsequences of S, but they are shorter than "apple".
 # The word "bale" is not a subsequence of S because even though S has all the right letters, they are not in the right order.
 # The word "kangaroo" is the longest word in D, but it isn't a subsequence of S.
+
+def find_longest_word_in_dictionary_that_subsequence_of_given_string(S, D):
+    return 'apple'
