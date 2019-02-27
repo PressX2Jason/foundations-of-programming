@@ -20,7 +20,6 @@ def find_longest_word_in_dictionary_that_subsequence_of_given_string(S, D):
     for word in D:
         prevB = -1
         for letter in word:
-            print(prevB)
             if letter in indexer:
                 for position in indexer[letter]:
                     if position > prevB:
