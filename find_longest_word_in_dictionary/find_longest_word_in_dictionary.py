@@ -8,4 +8,39 @@
 # The word "kangaroo" is the longest word in D, but it isn't a subsequence of S.
 
 def find_longest_word_in_dictionary_that_subsequence_of_given_string(S, D):
-    return 'apple'
+    indexer = {}
+    result = ''
+    maxLen = -1
+
+    for i, letter in enumerate(S):
+        if letter not in indexer:
+            indexer[letter] = []
+        indexer[letter].append(i)
+
+    for word in D:
+        prevB = -1
+        for letter in word:
+            print(prevB)
+            if letter in indexer:
+                for position in indexer[letter]:
+                    if position > prevB:
+                        prevB = position
+            # if the word in D has a letter that S doesn't have,
+            # it's impossible for it to be a subsequence
+            # if the current letter is found after the previous letter,
+            # then we would require rearrangment for subsequence
+            else:
+                print(word + ' is not a winner')
+                break
+        else:
+            # subsequence found
+            print('subsequence found', word, len(word), maxLen)
+            if len(word) > maxLen:
+                result = word
+                maxLen = len(word)
+    return result
+
+        
+            
+                
+            
