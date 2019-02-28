@@ -5,7 +5,7 @@
  * stringSplosion("abc") → "aababc"
  * stringSplosion("ab") → "aab"
  */
-  public static String StringSplosion(String str) {
+  public static String stringSplosion(String str) {
     StringBuilder sb = new StringBuilder();
     for(int i = 1; i < str.length() +1; i++){
       sb.append(str.substring(0, i));
