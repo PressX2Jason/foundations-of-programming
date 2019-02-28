@@ -18,20 +18,18 @@ public boolean canBalance(int[] nums) {
       
         if(left == right){
             return true;
-        }else{
-            if(moveRight == null){
-                if(left > right){
-                    moveRight = false;
-                }else{
-                    moveRight = true;
-                }
+        }
+        if(moveRight == null){
+            if(left > right){
+                moveRight = false;
             }else{
-                if(moveRight){
-                    mid += 1;
-                }else{
-                    mid -= 1;
-                }
+                moveRight = true;
             }
+        }
+        if(moveRight){
+            mid += 1;
+        }else{
+            mid -= 1;
         }
     }
     return false;
