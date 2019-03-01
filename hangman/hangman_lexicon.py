@@ -1,4 +1,4 @@
-class hangman_lexicon():
+class HangmanLexicon():
     def __init__(self):
         self.words = {
             0 : 'BUOY',
@@ -14,10 +14,10 @@ class hangman_lexicon():
         }
         self.wordCount = len(self.words)
     
-    def getWordCount(self):
+    def get_word_count(self):
         return self.wordCount
 
-    def getWord(index):
+    def get_word(self, index):
         if index not in self.words:
             raise IndexError('getWord: Illegal index')
         return self.words[index]
