@@ -1,3 +1,6 @@
+from random import randrange
+
+
 class HangmanLexicon():
     def __init__(self):
         self.words = {
@@ -16,6 +19,10 @@ class HangmanLexicon():
 
     def get_word_count(self):
         return self.wordCount
+
+    def get_random_word(self):
+        randomIndex = randrange(self.get_word_count())
+        return self.get_word(randomIndex)
 
     def get_word(self, index):
         if index not in self.words:
