@@ -3,8 +3,7 @@ from random import randrange
 
 
 class Hangman():
-    def __init__(self):
-        lexicon = HangmanLexicon()
+    def __init__(self, lexicon=HangmanLexicon()):
         self._secret_word = lexicon.get_word(
             randrange(lexicon.get_word_count()))
         self._guessed_word = ['-' for i in range(len(self._secret_word))]
