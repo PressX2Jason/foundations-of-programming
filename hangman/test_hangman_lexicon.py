@@ -1,5 +1,5 @@
 import pytest
-from .hangman_lexicon import HangmanLexicon
+from hangman_lexicon import HangmanLexicon
 
 lexicon = HangmanLexicon()
 
