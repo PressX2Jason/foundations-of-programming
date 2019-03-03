@@ -1,8 +1,6 @@
 import pytest
 from hangman_lexicon import HangmanLexicon
 
-lexicon = HangmanLexicon()
-
 seedWords = [
     'BUOY',
     'COMPUTER',
@@ -15,6 +13,8 @@ seedWords = [
     'SLITHER',
     'ZIRCON'
 ]
+
+lexicon = HangmanLexicon('./test_lexicon.txt')
 
 
 @pytest.mark.parametrize('index, word',
