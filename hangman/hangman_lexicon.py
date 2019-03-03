@@ -17,14 +17,14 @@ class HangmanLexicon():
         }
         self.wordCount = len(self.words)
 
-    def get_word_count(self):
+    def _get_word_count(self):
         return self.wordCount
 
     def get_random_word(self):
-        randomIndex = randrange(self.get_word_count())
-        return self.get_word(randomIndex)
+        randomIndex = randrange(self._get_word_count())
+        return self._get_word(randomIndex)
 
-    def get_word(self, index):
+    def _get_word(self, index):
         if index not in self.words:
             raise IndexError('getWord: Illegal index')
         return self.words[index]

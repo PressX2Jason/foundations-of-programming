@@ -22,11 +22,11 @@ seedWords = [
                           for index, word in enumerate(seedWords)]
                          )
 def test_lexicon_get_word(index, word):
-    assert lexicon.get_word(index) == word
+    assert lexicon._get_word(index) == word
 
 
 def test_lexicon_get_word_count():
-    assert lexicon.get_word_count() == 10
+    assert lexicon._get_word_count() == len(seedWords)
 
 
 def test_get_random_word():
@@ -36,4 +36,4 @@ def test_get_random_word():
 
 def test_get_word_out_of_bounds():
     with pytest.raises(IndexError):
-        lexicon.get_word(99)
+        lexicon._get_word(99)
